@@ -1,0 +1,463 @@
+%----------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------
+
+\documentclass[10pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+
+\moderncvstyle{classic} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\usepackage{amsmath,amssymb,latexsym}
+\usepackage[scale=0.9]{geometry} % Reduce document margins
+%\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
+%\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+%\quote{Curriculum Vit\ae{} }                                
+%\nopagenumbers{}    
+
+\usepackage{pdfpages}
+\usepackage{standalone}
+\usepackage{lipsum}
+\usepackage[url=false,
+backend=biber,
+style=authoryear,
+doi=false,  
+isbn=false,
+backref=false,
+dashed=false, 
+maxnames=99,  
+sorting=ydnt]{biblatex}          
+\addbibresource{mybib.bib}    
+\renewcommand{\listitemsymbol}{-} % change the symbol for lists
+\newcommand{\cvdoublecolumn}[2]{%
+	\cvitem[0.75em]{}{%
+		\begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#1\end{minipage}%
+		\hfill%
+		\begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#2\end{minipage}%
+	}%
+}
+\newcommand{\cvreference}[7]{%
+	\textbf{#1}\newline% Name
+	\ifthenelse{\equal{#2}{}}{}{\addresssymbol~#2\newline}%
+	\ifthenelse{\equal{#3}{}}{}{#3\newline}%
+	\ifthenelse{\equal{#4}{}}{}{#4\newline}%
+	\ifthenelse{\equal{#5}{}}{}{#5\newline}%
+	\ifthenelse{\equal{#6}{}}{}{\emailsymbol~#6\newline}%
+	\ifthenelse{\equal{#7}{}}{}{\mobilesymbol~#7}}
+
+%----------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------
+
+\firstname{Karthik} % Your first name
+\familyname{Selvan} % Your last name
+
+% All information in this block is optional, comment out any lines you don't need
+%\title{Curriculum Vitae}
+\address{Paul Steenbergenlaan 47}{2548 ZK Den Haag, The Netherlands}
+\mobile{+31 (0)649582556}
+\phone{https://nl.linkedin.com/in/karthik-selvan}
+\email{connectme2karthik@gmail.com}
+% The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
+\photo[70pt][0.8pt]{picture} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
+%\quote{To evolve as a practitioner in Electrical Engineering and thereby, optimizing personal contribution in any given context}
+
+%----------------------------------------------------------------------------------
+
+\begin{document}
+
+\makecvtitle % Print the CV title
+
+
+%----------------------------------------------------------------------------------
+%	PERSONAL INFORMATION SECTION
+%----------------------------------------------------------------------------------
+\section{Personal Details}
+%\cvitem{Objective}{To evolve as a practitioner in Electrical Engineering and thereby, optimizing personal contribution in any given context}
+%\cvitem{Address}{Roland Holstlaan 69, 2624 HB, Delft, The Netherlands}
+\cvitem{Gender}{Male}
+\cvitem{Marital Status}{Married}
+\cvitem{Date of Birth}{06 May, 1989}
+\cvitem{Nationality}{Indian}
+\cvitem{Visa Status}{Dependent Visa, Highly Skilled Migrant}
+%\cvitem{Phone}{ +31649582556, +31641149972}
+%\cvitem{E-mail}{connectme2karthik@gmail.com, karthikselvan@hotmail.com}
+%\cvitem{LinkedIn}{https://nl.linkedin.com/in/karthik-selvan}
+\cvitem{Languages}{English, Dutch (A2), Hindi, Malayalam, Tamil}
+\cvitem{Interests}{Rubik's Cube, Badminton, Cricket, Listening Music}
+%\cvitem{Career Target}{A challenging career in an encouraging firm where I could combine my strong analytical and technical skills with team player mentality to solve day to day challenges in simpler ways. Being motivated and creative, look for creative solutions for the challenges and to combine my friendly attitude with leadership and communication skills to transfer knowledge and deliver service to people in need.}
+
+%\cvlistdoubleitem{Date of Birth - 06 May, 1989}{Marital Status - Married}
+%\cvlistdoubleitem{Nationality - Indian}{LinkedIn - https://nl.linkedin.com/in/karthik-selvan}
+%\cvlistdoubleitem{Languages - English, Dutch, Hindi, Malayalam, Tamil}{Interests - Rubik's Cube, Badminton, Cricket, Listening Music}
+
+\section{Career Target}
+\cvitem{}{A challenging career as FPGA Engineer in an encouraging firm where I could combine my strong analytical and technical skills with team player mentality to solve day to day challenges in simpler ways. Being motivated and creative, look for solutions for the challenges and combine my friendly attitude with leadership and communication skills to transfer knowledge and deliver service to clients in need.}
+
+%----------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------
+\section{Educational Background}
+\cventry{\textbf{2018--2020}}{Massive Open Online Course in Embedded Systems}{The University of Texas at Austin}{Texas}{United States}
+{\begin{itemize}
+\item Syllabus includes Input/Output and Multi-Threaded Interfacing based on ARM Cortex-M4 based Microcontroller
+\item Hands-on assignments impart design, develop and build solutions to real-world problems using embedded systems
+\end{itemize}
+}
+
+\cventry{\textbf{2011--2013}}{Masters in Electrical Engineering}{Mahatma Gandhi University}{Kerala}{India}
+{\begin{itemize}
+\item \textsc {$2^{nd}$ Rank Holder in Masters}, \textsc{CGPA - 8.40}
+\item Specialized in Advanced Telecommunication \& Information Systems
+\end{itemize}
+}
+
+\cventry{\textbf{2007--2011}}{Bachelors in Electrical Engineering}{University of Calicut}{Kerala}{India}
+{\begin{itemize}\item Specialized in Electronics and Communication Engineering, \textsc{72.71\%}\end{itemize}}
+
+\cventry{\textbf{2005--2007}}{Intermediate Studies}{Kerala State Board}{Kerala, India}{}{\begin{itemize}\item Specialized in Computer Science, Physics, Chemistry, Maths, \textsc{92.67\%}\end{itemize}}
+
+\cventry{\textbf{2004--2005}}{AISSE}{Central Board of Secondary Education}{Kerala, India}{}{\begin{itemize}\item Specialized in Physics, Maths, English \textsc{88.60\%}\end{itemize}}
+
+%----------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------
+
+\section{Professional Experience}
+
+\cventry{}{\textsc{5+ years of experience in industries and universities with technical, managerial and industrial collaborator job roles}}{}{}{}{}
+
+\cventry{01-May-2019--until the present}{Hardware Engineer}{R\&D team}{Intero Integrity Services B.V.}{Geldermalsen, the Netherlands}
+{\begin{itemize}
+\item Development of new inspection technologies.
+\item Design and engineering of high-tech inspection equipment and associated documentation, procedures and training.
+\item Development and maintenance of firmware for new and existing inspection equipment.
+\item Production of equipment and support to the operational units.
+\item Design, implement and test hardware and firmware for (embedded) systems, which are characterized by a mix of sensors, analog front-end and fast digital
+techniques and software.
+\item Design and develop PCBs characterized with sensors, mixed-signal and uCs and FPGAs.
+\item Responsible within a team for defining, designing, preparing and realizing prototypes and then making the systems production-ready.
+\item Define requirements, make concepts and work out a concept to detailed design.
+\item Draft test plans and perform tests according to applicable guidelines and specifications.
+\end{itemize}}
+
+\cventry{01-Feb-2018--30-Apr-2019}{FPGA Design Engineer}{R\&D team}{Oldelft Ultrasound B.V.}{Delft, the Netherlands}
+{\begin{itemize}
+\item Establish electrical interface between ASICs in the acoustic hardware and third party interfaces of ultrasound system
+\item Interaction with mechanical, electronic, acoustic and ASIC design engineers of a multidisciplinary R\&D team. Support ASIC designers to create an optimum communication with FPGA.
+\item Design and build the complete Hardware In Loop test setup for ultrasound probes in R\&D team and Production units
+\item Performing simulation with C++ based test bench in linux environment
+\item Programming and debugging of Mixed-electronic Power board
+\item Functional decomposition of board level architecture down to component/FPGA level
+\item Documenting the requirement analysis, detailed block level description; simulation results, validation/verification procedures, test reports and interface control documents
+\end{itemize}}
+
+\cventry{01-July-2017--31-Jan-2018}{Signal Processing/FPGA Design Engineer}{R\&D team}{IP2 Solutions B.V.}{Eindhoven, the Netherlands}
+{\begin{itemize}
+%\item Signal processing Engineer with project management skills
+\item Implementation of Frequency Modulated Continuous Wave Radar (4x4x4, 8x8x4) on FPGA
+\item Building top level CPU centric (soft/hard-processor) designs, interface logic and control logic in FPGAs
+\item RTL coding in VHDL for Communication Systems blocks, DSP designs, etc
+\item Custom IP development for MIMO Scheduler, RADAR Signal Processing blocks, and their documentation
+%\item Responsible for architecting, designing, implementing and validating high speed digital circuit board designs
+\item High-speed interfacing of FPGA with different devices (Laptop, DDS, ADC) using protocols like Ethernet, TCP, SPI, UDP, UART, I2C etc
+\item Expertise on comprehensive engineering design involving Embedded Hardware and Software development 
+\end{itemize}}
+
+
+\cventry{01-May-2017--30-Jun-2017}{FPGA Engineer-Intern}{Hardware Development}{IP2 Solutions B.V.}{Eindhoven, the Netherlands}
+{\begin{itemize}
+%\item Implemented Frequency Modulated Continuous Wave Radar in Altera MAX10 FPGA development board
+\item Controlled the scheduling of Multiple Input Multiple Output antennas and sweeps are made faster in hardware
+%\item Comprehensive RTL design involving Embedded Hardware and protocols like UDP, TCP etc
+\end{itemize}}
+
+\cventry{04-Jun-2014--30-Sep-2016}{Assistant Professor}{Dept. of Electronics \& Communication Eng.}{Ammini College of Engineering}{India}
+{\begin{itemize}
+\item Mentored students in their academic projects, research works and publications
+\item Lectured courses and handled labs on Digital System Design and Analog Electronics
+\item Supervised Bachelor-level projects on embedded \& programmable logic design, signal processing \& telecommunication  
+\item Developed strong relationships with industries, universities and government communities for collabarations
+\item Conducted various workshops on Digital System Design, miniaturization and FPGA
+\item Organized industrial visits, project exhibitions and soft-skill training programs
+\end{itemize}}
+
+\cventry{02-May-2014--02-Jun-2014}{Programme Manager}{Additional Skill Acquisition Programme}{Govt. Victoria College}{Palakkad, Kerala, India}
+{\begin{itemize}
+\item Managed the learning and development activities of ASAP in schools and colleges
+\end{itemize}}
+
+\cventry{30-Mar-2013--08-Apr-2014}{Lecturer}{Dept. of Electronics \& Communication Engineering}{NSS College of Engineering}{Kerala, India}
+{\begin{itemize}
+\item Lectured courses on Wireless Communication and Digital Design
+\item Assisted bachelor students in the design and development of their embedded hardware and software projects
+\end{itemize}}
+
+\cventry{Jan-2013 -- Feb-2013}{Trainee}{Advanced Mobile Communication Technology}{BSNL Regional Telecom Training Center}{India}{\begin{itemize}
+\item Skill-based training on GSM/CDMA, 3G \& Wi-Fi
+\end{itemize}}
+
+\cventry{01-Aug-2012--14-Aug-2013}{Post Graduate Research Scholar}{Advanced Digital Signal Processing \& Digital Design Research Lab}{Rajiv Gandhi Institute of Technology}{India}{\begin{itemize}
+\item Associated with Advanced DSP \& Digital Design Research Lab for Masters thesis
+\item Published the work in \textsc{IEEE} and other conferences (5 publications)
+\item Attended workshops and seminars on Signal Processing and Programmable Logic
+\end{itemize}}
+
+\cventry{Aug-2009--Sep-2009}{Intern}{}{Indian Telecom Industries Limited}{India}{\begin{itemize}
+\item Assisted in the manufacturing and installation of GSM equipments for BSNL Telecom
+\end{itemize}}
+
+%------------------------------------------------
+\section{Area of Interest}
+\cvitem{}{FPGA,  SoC, Digital/Analog Systems Design, Embedded Systems, Digital Signal Processing, Electronic Instrumentation, Radar, Mobile Telecommunication, Satellite Communication \& Project Management}
+
+%----------------------------------------------------------------------------------
+%	PROJECT SECTION
+%----------------------------------------------------------------------------------
+
+\section{Project Experience}
+\subsection{Industrial}
+\cvitem{\emph {Project}}{FPGA interface between ASICs in Ultrasound transducers and international customer Ultrasound systems}
+\cvitem{}{Designed and implemented complete probe test setup architecture on FPGA for R\&D and Production teams}
+\cvitem{}{Programming and debugging of Mixed electronic Power Board using FPGA}
+\cvitem{}{FPGA implementation of Frequency Modulated Continuous Wave 8x8 and 4x4 MIMO Radar}
+\subsection{Masters}
+\cvitem{\emph {Thesis Title}}{Text Independent Automatic Speaker Recognition in Malayalam
+%\newline{}The problem statement is to recognize persons from their voice with no constraints on the words that they are allowed to use by overcoming the physical differences and the characteristic manner of speaking among them. Different speech processing techniques like pre-emphasis, frame blocking and windowing have been used to process the speech utterances in the Malayalam language. MFCC and its derivatives have been used to extract the speaker-specific features. The speaker model is trained using Gaussian Mixture Models and stored into the database. The focus of this work is in applications which require high identification rates using short utterance from unconstrained speech.
+}
+%\cvitem{Supervisors}{Prof. Leena Mary \& Mr. Anish Babu K.K.}
+%\cvitem{}{Tools - HTK, Python, Matlab, Signal Processing Toolbox, OS - Ubuntu 12.04 LTE, Duration - 6 months}
+%\cvitem{}{\textsc{Associated with Advanced DSP Research Lab for Masters thesis}}
+
+
+\cvitem{\emph {Mini Projects}}{Automatic Speaker Recognition System for Access Control
+%\newline{}Automatic Speaker Recognition System for Access Control
+%The recognition phrases are fixed or known beforehand in a Text-Dependent speaker recognition system. The system is based on spectral analysis and is used for access control and security applications. An application with GUI is also developed for security purposes.
+}
+%\cvitem{Supervisors}{Prof. Leena Mary \& Mr. Anish Babu K.K.}
+%\cvitem{}{Tools - HTK, Python, Matlab, Signal Processing Toolbox, OS - Ubuntu 12.04 LTE, Duration - 6 months}
+
+\cvitem{}{CCK and Barker Coding Implementation in IEEE 802.11Standard
+%\newline{}A Matlab-Simulink simulation of the $IEEE 802.11b$ with changes made only to the Physical layer, that resulting in higher data rates and more robust connectivity. Barker coding is the modulation technique for lower data rates ($1, 2 Mbps$) and Complementary Code Keying for higher data rates ($5.5$ and $11 Mbps)$ and all data rates are using Direct Sequence Spread Spectrum transmission to reduce jamming and eavesdropping. The tradeoff is either you increase power or decrease range to maintain signal quality. As you move away from the radio, the radio adapts and uses a less complex and slower encoding mechanism to send data, resulting in the lower data rates. The results are expressed in $BER$ to $E_b/N_0$ dependency.
+}
+%\cvitem{}{Tools - Matlab \& Simulink, Communication Toolbox, OS - Windows 7, Duration - 1 month}
+
+\cvitem{}{Alias Minimization of 1-D Signals using DCT based Learning
+%\newline{}It is possible to transmit an analog signal by undersampling it and recover the same with minimum distortion at the receiver by this approach, resulting in reduced data storage. Given an under-sampled test speech signal and a training set consisting of several speech signals each of which is under-sampled as well as sampled at greater than Nyquist rate, the non-aliased frequencies for the test signal using the training set are estimated. The comparison with standard interpolation techniques indicates better performance in terms of both subjective and quantitative analysis.
+}
+%\cvitem{}{Tools - Matlab, Signal Processing Toolbox, OS - Windows 7, Duration - 3 months}
+
+
+%\cvitem{}{Cognitive Radio Technology for Smart Home Applications
+%\newline{} With an increase in the communication-enabled devices, there is a need for detecting underutilized frequency channels in the smart home environment for the communication among them. Using methods of non-cooperative sensing of Cognitive Radio, the spectral congestion can be eluded from the smart home environment and provide a green alternative for the existing smart home. A prototype is developed using USRP module and different methods of spectrum sensing are compared in the smart home environment.
+%}
+%\cvitem{}{Tools - Matlab, LabVIEW, NI USRP 2920, OS - Windows 7, Duration - 3 months}
+
+\cvitem{}{Matlab Simulation of TDMA for Satellite applications
+%\newline{} Time Division Multiple Access is the most common and reliable channel access method used for satellite applications. TDMA is simulated in Matlab for signals transmitted from multiple earth stations and the transmission scheme  and the traffic capacity of TDMA are verified.
+}
+%\cvitem{}{Tools - Matlab \& Simulink, OS - Windows 7, Duration - 1 month}
+
+%\cvitem{\emph {Seminar}}{Framelet based Blind Motion De-blurring from a Single Image
+%\newline{}A motion blurred image due to camera shake happens in any camera. A regularization-based approach is proposed to remove motion blurring from the image by regularizing the sparsity of both the original image and the motion-blur kernel under tight wavelet frame systems.}
+
+\subsection{Bachelors}
+\cvitem{\emph {Main Thesis}}{RF Robo for Remote Data Access
+%\newline{}RF Robo is designed for accessing data wirelessly from hazardous or remote areas such as mines, earthquake prone areas, where human life is at risk. The robo is equipped with a webcam, transceivers, an ultrasonic sensor and other sensors to sense atmospheric conditions like humidity, smoke, gas etc. The control station at another end which can be used for data acquisition using Radio Frequency signals. Designed and soldered the prototype.
+}
+%\cvitem{}{Tools - MPLAB, Proteus, OrCAD PSpice, PIC16F877A, PIC Kit2}
+%\cvitem{}{Interfacing - Ultrasonic Sensors, Serial Port Interfacing, DC Motor \& Stepper Motor, Wireless Camera}
+%\cvitem{}{OS - Windows 7, Duration - 12 months, Team size - 4}
+
+\cvitem{\emph {Mini Project}}{Green House Sensor
+%\newline{}A simple, easy to install, microcontroller-based circuit to monitor and record the values of temperature, humidity, soil moisture and sunlight of the natural environment that are continuously modified and controlled in order, optimize them to achieve maximum plant growth and yield. Designed and soldered the prototype.
+}
+%\cvitem{}{Tools - mikroC, Proteus, OrCAD PSpice, PIC16F877A, PIC Kit2}
+%\cvitem{}{Interfacing - ADC, Serial Port \& DC Motor}
+%\cvitem{}{OS - Windows 7, Duration - 6 months, Team size - 4}
+
+%\cvitem{\emph {Seminar}}{Agile Spectrum Evacuation in Cognitive Radio Networks
+%\newline{}Cognitive Radios have been advanced as a technology for the opportunistic use of under-utilized spectrum since they are able to sense the spectrum and use the frequency band if no primary user is detected. This method of agile spectrum evacuation allows any secondary user to continue using the band until the return of the primary user is detected through the formation of a set of users that exclusively engages in sensing primary user in a co-operative manner. Better interference protection and enhanced spectrum utilization are achieved using this approach.}
+
+\subsection{Bachelor Projects Supervised}
+\cvitem{}{Apart from my own projects, I have also guided academic projects for undergraduate students.}
+\cvlistdoubleitem{Voice Map for blind}{Automatic Wiper Control}
+\cvlistdoubleitem{Smart Parking System}{Rotating LED Display}
+\cvlistdoubleitem{Speaker Recognition using Matlab}{Smart Helmet}
+
+\section{Managerial Posts}
+
+%\cvitem{1.}{Organized Workshop on NPTEL Online Courses, 2015}
+%\cvitem{2.}{Convener of Innovation \& Entrepreneurship Club at Ammini College of Engineering}
+\cvitem{1.}{Convener of Innovation \& Entrepreneurship Club, Workshop on NPTEL Online Courses 2015, National Level Project Exhibition 2015, Department Association activities at Ammini College of Engineering}
+%\cvitem{4.}{Convener of National Level Project Exhibition 2015 at Ammini College of Engineering}
+\cvitem{2.}{Organized International Conference on Recent Innovations in Technologies (ICRIT), 2012}
+\cvitem{3.}{Project Leader for Bachelor Mini and Main Projects, 2010-11}
+
+\section{Awards \& Scholarships}
+\cvitem{1.}{Achieved 2nd prize in Thesis Presentation Contest-2013 under Centre for Engineering Research \& Development}
+\cvitem{2.}{Received the MHRD Scholarship for Masters}
+\cvitem{3.}{Qualified National level GATE exam 2011}
+
+%----------------------------------------------------------------------------------
+%	COMPUTER SKILLS SECTION
+%----------------------------------------------------------------------------------
+
+\section{Technical Skills}
+\cvitem{EDA Tools}{Xilinx Vivado/ISE, Altera Quartus Prime, Lattice Diamond, ModelSim, Keil $\mu$Vision, IAR Embedded Workbench, Matlab, Proteus, Cadence OrCAD PSpice, LabVIEW}
+\cvitem{Programming}{\textsc{VHDL}, C, C++, mikroC, MPLAB, Python, Octave, HTK}
+\cvitem{Boards}{Xilinx Zynq All Programmable SoC/Artix-7/Spartan-6, Intel Altera MAX 10, TI Stellaris ARM Cortex-M4 Launchpad, Raspberry Pi B+,  PIC16F877A, PIC Kit2, 8051, Arduino, NI USRP 2920}
+\cvitem{Documentation}{Latex, Microsoft Office Tools}
+\cvitem{Management}{Microsoft Project, Google Sheets}
+\cvitem{OS}{Linux, Windows, Android, MS DOS}
+
+
+\section{Industrial Visits}
+\cvlistdoubleitem{European Space Research and Technology Centre \\(\textsc{ESTEC-ESA}), Noordwijk}{Netherlands Institute for Radio Astronomy (\textsc{ASTRON}), Dwingeloo}
+\cvlistdoubleitem{Joint Institute for VLBI ERIC (\textsc{JIVE}), Dwingeloo}{\textsc{ASML}, Veldhoven}
+\cvlistdoubleitem{\textsc{KPN} Technologies Lab, The Hague}{Bharat ELectronics (\textsc{BEL}), Bangalore}
+\cvlistdoubleitem{DoorDarsan, Palakkad}{BSNL, Palakkad}
+\cvlistdoubleitem{All India Radio Thrissur}{ACE Electronics Ltd., Mysore}
+
+%----------------------------------------------------------------------------------
+%	IV SECTION
+%----------------------------------------------------------------------------------
+\section{Certified Courses}
+\cvitem{1.}{NT2-A2 Niveautoetsverklaring van \textsc{ROC Mondriaan}}
+\cvitem{2.}{English for Academic Purposes-2 (EAP2) offered by Faculty of \textsc{TPM, TU Delft}} %(13-Feb-2017 -- 07-Apr-2017)
+\cvitem{3.}{Hands-on Workshop on Programming with ARDUINO at Ammini College of Engg, Palakkad}
+\cvitem{4.}{Pattern Recognition sponsored by TEQIP, Govt. Of Kerala}
+\cvitem{5.}{FDP on Theory of Computation at Jyothi Engineering College, Thrissur, 2013}
+\cvitem{6.}{Automatic Speech Recognition using Hidden Markov Models sponsored by DIT, Govt. Of India}
+\cvitem{7.}{Embedded System Design based on PIC Microcontroller}
+\cvitem{8.}{Getting Started with Android Application Development at NIIT Palakkad}
+\cvitem{9.}{Introduction to Android : An Open Source Mobile Device Platform Course at NIIT Palakkad}
+\cvitem{10.}{Workshop on Smart Materials at IIT Madras}
+\cvitem{11.}{ISTE Workshop on Mechanics with MATLAB}
+\cvitem{12.}{Diploma in Computer Application (\textit{DCA}) with A+ grade for 6 months}
+
+
+\section{Conferences/Workshops Attended}
+\cvitem{1.}{Seminar on FPGA for real-time data processing organized by Electronics \& Applications 2017 at Utrecht}
+\cvitem{2.}{Workshop on PocketQubes organized by DelfiSpace at TU Delft}
+\cvitem{3.}{Workshop on KTU Entrepreneurship Startup Policy Making}
+\cvitem{4.}{Seminar on An Effective way of Writing Research Articles for Journals}
+\cvitem{5.}{National Colloquium on Emerging Areas of Research in Engineering Sciences}
+\cvitem{6.}{3rd National Technological Congress (NATCON)}
+\cvitem{7.}{IEEE Hub 4 Enigma WIE week celebrations}
+\cvitem{8.}{All Kerala Student Congress of IEEE Kerala Section}
+
+\section{Extra-Curricular Activities}
+%\cvitem{1.}{Presented in National level Electronics Project competition}
+\cvitem{1.}{Participated in college and school level technical fests, sports, arts, essay competition and received applauds}
+\cvitem{2.}{Possessed National level achievements in Talent Search \& PCM scholarship examinations}
+\cvitem{3.}{Organized and participated in Badminton tournaments}
+\cvitem{4.}{Individual Sports Champion at School level}
+\cvitem{5.}{\textsc{Students Association Chairman} for the year 2010}
+\cvitem{6.}{Active \textsc{IEEE Organizer} for 2 years (2008-2010)}
+
+%----------------------------------------------------------------------------------
+%	PUBLICATIONS SECTION
+%----------------------------------------------------------------------------------
+\section{Publications}
+
+\subsection{International Conferences}
+\cvitem{1.}{Speaker Recognition System for Security Applications (IEEE RAICS 2013)}
+\cvitem{2.}{Text Independent Speaker Recognition System in Malayalam (IEEE ICACCS 2013)}
+\cvitem{3.}{Text Dependent Automatic Speaker Recognition System in MalayalamICECIT 2013)}
+
+\subsection{National Conferences}
+\cvitem{1.}{Denoising of Impulse Noise Corrupted Image using Modified Directional Weighted Median Filter Method and Contrast nhancement (LAVES 2014)}
+\cvitem{2.}{Text Dependent Automatic Speaker Recognition for Access Control (NCSEE 2013)}
+%\subsection{Online Journals}
+%\cvitem{1.}{Voice Maps for Visually Impaired with Obstacle Detection (IJRITCC 2016)}
+%\cvitem{2.}{Voice Maps (IRJET 2016)}
+
+%------------------------------------------------
+%\section{Subjects Taught \& Labs Handled}
+%\cvitem{}{Experience in teaching the B. Tech syllabus of University of Calicut 2009 \& 2014 Scheme and APJ Abdul Kalam Technological University (KTU)}
+%\cvitem{}{Design \& development of circuits and lab manual}
+%\subsection{Ammini College of Engineering}
+%\cvlistdoubleitem{Information Theory \& Coding} {Electronic Circuits}
+%\cvlistdoubleitem{Signals \& Systems}{Mobile Computing}
+%\cvlistdoubleitem{Digital Communication}{Digital System Design}
+%\cvlistdoubleitem{Network Analysis \& Synthesis}{Internet Technology}
+%\cvlistdoubleitem{Basics of Electronics \& Communication}{Advanced Communication Lab}
+%\cvlistdoubleitem{Electronic Circuits Lab}{Electronic Circuits \& Devices Lab}
+
+%\subsection{NSS College of Engineering}
+%\cvlistdoubleitem{Mobile Computing}{Wireless Mobile Communication}
+%\cvlistdoubleitem{Satellite Communication}{Micro-Controllers \& Micro-Processors}
+
+
+%----------------------------------------------------------------------------------
+%	REFERENCES
+%----------------------------------------------------------------------------------
+
+\section{References}
+%\cvitem{}{On request}
+\cvitem{1.}{Mr. Erwin Dumay, Manager R\&D, Oldelft B.V., Elektronicaweg 10, 2628 XG  Delft, The Netherlands, edumay@oldelft.nl, +31 015 2698953}
+\cvitem{2.}{Mr. Peter J Koomen, Managing Director, IP2 Solutions B.V., Irislaan 9, 5595 EH  Leende, The Netherlands, pj.koomen@ip2-solutions.nl, +31 655344748}
+%\cvdoublecolumn{
+ % \cvreference{Mr. Erwin Dumay}
+  %  {Manager R\&D}
+   % {Oldelft B.V.}
+   %{Elektronicaweg 10, 2628 XG  Delft}
+%    {The Netherlands}
+ %   {edumay@oldelft.nl}
+  %  {+31 015 2698953}
+   % }
+    %{\cvreference{Mr. Peter J Koomen}
+   	%{Managing Director}
+   	%%{IP2 Solutions B.V.}
+   	%{Irislaan 9, 5595 EH  Leende}
+   	%{The Netherlands}
+   	%{pj.koomen@ip2-solutions.nl}
+   	%{+31 655344748}
+    }
+
+%\cvitem{1.}{\textbf{Mr. Erwin Dumay}, Manager R\&D, Oldelft B.V. \newline Elektronicaweg 10, 2628 XG  Delft, The Netherlands, +31 015 2698953, edumay@oldelft.nl}
+%\cvitem{2.}{\textbf{Mr. Peter J Koomen}, Managing Director, IP2 Solutions B.V. \newline Irislaan 9, 5595 EH  Leende, The Netherlands, +31 655344748, pj.koomen@ip2-solutions.nl}
+
+%\cvitem{3.}{Mrs. Susan Varghese, Head Of the Department, Dept. of ECE, Ammini College of Engineering, Manakara PO, Palakkad, Kerala, India - 678613, +91 9447964610, susan.varghese@ammini.edu.in}
+
+%\cvitem{4.}{Dr. R Sindhu, Head Of the Department \& Professor, Dept. of ECE, NSS College of Engineering, Akathethara PO, Palakkad, Kerala, India, India - 678008, +91 9497355417, rsindhu@gmail.com}
+
+%\cvitem{5.}{Mr. Anish Babu KK, Assistant Professor, Dept. of ECE, Rajiv Gandhi Institute of Technology, Vellore PO, Kottayam, Kerala, India - 686501, +91 9288194930, anishkochi@yahoo.co.uk}
+
+%\cvitem{6.}{Dr. Sreekanth Madhav, Assistant Professor, Dept. of ECE, Jyothi Engineering College, Vettikattiri PO, Thrissur, Kerala, India - 679531, +91 9847595602, sreekanthmadhav@gmail.com}
+
+
+%----------------------------------------------------------------------------------
+%	COVER LETTER
+%----------------------------------------------------------------------------------
+
+% To remove the cover letter, comment out this entire block
+
+%\clearpage
+%
+%\recipient{HR Departmnet}{Bosch, The Netherlands} % Letter recipient
+%\date{\today} % Letter date
+%\opening{Dear Sir /  Madam,} % Opening greeting
+%
+%\makelettertitle % Print letter title
+%
+%I was quickly drawn to your posting for the job position of HBO Pedestrian Stage Electrical / Mechatronics - Development Control Supply Systems in Bosch and I believe that my skills, passion and experience make me a perfect fit for the position. My technical interests lie in the field of Signal Processing, Satellite Communication, Image Processing etc, more specifically, in the Signal Processing for Communication as well as their applications.\newline{}
+%
+%Engineering had always fascinated me right from my school days. My educational background has instilled in me the qualities required to meet the rigor of this demanding profession. Graduation in Electronics \& Communication Engineering has provided a strong foundation in understanding the possibility of developing the technology in different areas of life and in connecting the acquired knowledge to meet the social needs. I had my electives  for Bachelors in DSP Controllers, Satellite Communication Systems and Television Engineering \& RADAR systems.\newline{}
+%
+%Masters in Advanced Communication \& Information Systems has not only given me a sound and firm grounding in Communication Engineering but also taught me the invaluable skills to manage, lead and collaborate effectively with people. As a result, I had publications in IEEE Conferences also. During the course, I took up projects on Cognitive Radio, Alias Minimization, CCK \& Barker coding and TDMA for Satellite applications that are described in my enclosed resume. It developed in me the ability to analyze problems, constraints and limitations of the real world and how to manage them. Throughout, my scholastic records and achievements have been outstanding. I have secured second rank during the Masters education. The subjects studied matching the job profile includes Communication Networks, Real Time \& Embedded Systems, Wireless Communication, Satellite Communication etc.\newline{}
+%
+%I look forward and get a chance to be HBO Pedestrian Stage Electrical / Mechatronics - Development Control Supply Systems at your company, a reputed firm in the Netherlands. I always want to be enrolled in job works in my favorite field. I have worked as Assistant Professor in Department of Electronics \& Communication Engineering for more than 2.5 years. The subjects I taught gave me a strong base in the network concepts. My experience in teaching and projects provide me with valuable prerequisites for the engineer role.\newline{}
+%
+%I am looking forward to this position; a pursuit of career in engineering and experience of excitement and satisfaction in this vast expanding field. Good working environment, an extremely challenging job and working with skilled inter-disciplinary team are the factors which have motivated me to choose for my job at your company. Since me and my spouse (working as Space Systems Engineer in TUDelft) have relocated to Delft, I think this is the perfect opportunity for me to grow in my career. I have the residence permit (VVR) to live/work in the Netherlands valid till Oct 2019.\newline{}
+%
+%Based on my academic knowledge and experience, I believe that I have the capability and potential to take this job position. I am confident that I will be an active, open minded Engineer, willing to contribute during my job. I am waiting for your kind and positive response. Thank you for your time and consideration. I'll be more than happy to provide any further information or documents if required.
+%
+%\closing{Sincerely,} % Closing phrase
+%\enclosure[Attached]{curriculum vit\ae{}} % List of enclosed documents
+%
+%
+%
+%\makeletterclosing % Print letter signature
+
+%----------------------------------------------------------------------------------
+\end{document}
